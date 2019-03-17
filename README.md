@@ -9,7 +9,7 @@ Node.js library for the cPanel/WHM API
 ```js
 var cpanel = require('cpanel-lib');
 
-var options = {
+var cpoptions = {
     host: 'whm.example.com',
     port: 2087,
     secure: true,
@@ -18,7 +18,7 @@ var options = {
     ignoreCertError: true
 };
 
-var cpanelClient = cpanel.createClient(options);
+var cpanelClient = cpanel.createClient(cpoptions);
 
 cpanelClient.call('version', {}, function (err, res) {
     console.log('WHM Version: %j', res.version);
